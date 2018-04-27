@@ -54,7 +54,7 @@ function push(value : any)
 
 Push a new value at the end of the queue
 
-### method hasWaiter
+#### method hasWaiter
 
 ```javascript
 function hasWaiter() : bool
@@ -62,7 +62,7 @@ function hasWaiter() : bool
 
 Returns `true` if a consumer is currently waiting for the next value, `false` otherwise.
 
-### method cancelWait
+#### method cancelWait
 
 ```javascript
 function cancelWait(err : Error?)
@@ -71,7 +71,7 @@ function cancelWait(err : Error?)
 If a consumer is currently waiting on the queue, causes the consumer to stop waiting.
 The consumer promise will be rejected with `err`, if given, or a generic error otherwise.
 
-### method pop
+#### method pop
 
 ```javascript
 function pop() : Promise<any>
@@ -81,7 +81,7 @@ Asynchronously returns the next value in queue. This method returns a promise th
 be fulfilled immediately if the queue already contains a value, and will be fulfilled
 when the producer calls `push()` otherwise.
 
-### method tryPop
+#### method tryPop
 
 ```javascript
 function tryPop() : any?
