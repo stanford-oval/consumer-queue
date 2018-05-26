@@ -60,11 +60,13 @@ module.exports = class ConsumerQueue {
         let waiter = this._waiter;
         this._waiter = null;
         this._cancel = null;
-        if (waiter)
+        if (waiter) {
             waiter(data);
-        else if (this._tail === null)
+        } else if (this._tail === null) {
             this._head = this._tail = { data: data, next: null };
-        else
+        } else {
             this._tail.next = { data: data, next: null };
+            this._tail = this._tail.next;
+        }
     }
 };

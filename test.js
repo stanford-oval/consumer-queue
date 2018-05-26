@@ -34,6 +34,32 @@ function testSimple() {
     queue.push(SUCCESS[2]);
 }
 
+function testBurst() {
+    const queue = new ConsumerQueue();
+    const N = 20;
+
+    let i = 0;
+    function loop() {
+        return queue.pop().then((v) => {
+            if (i < N)
+                assert.strictEqual(v, i);
+            else
+                assert.fail();
+            i++;
+            return loop();
+        });
+    }
+    loop(0).then(() => {
+        if (i !== N)
+            assert.fail('queue stopped too early');
+    });
+
+    setTimeout(() => {
+        for (let i = 0; i < N; i++)
+            queue.push(i);
+    });
+}
+
 function testAsync() {
     const queue = new ConsumerQueue();
 
@@ -105,6 +131,7 @@ function testTryPop() {
 function main() {
     testSimple();
     testAsync();
+    testBurst();
     testCancel1();
     testCancel2();
     testTryPop();
