@@ -128,6 +128,13 @@ function testTryPop() {
     assert.strictEqual(queue.tryPop(), null);
 }
 
+function testParallelPop() {
+    const queue = new ConsumerQueue();
+
+    queue.pop();
+    assert.throws(() => queue.pop());
+}
+
 function main() {
     testSimple();
     testAsync();
@@ -135,5 +142,6 @@ function main() {
     testCancel1();
     testCancel2();
     testTryPop();
+    testParallelPop();
 }
 main();
