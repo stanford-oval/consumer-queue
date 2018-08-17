@@ -1,6 +1,6 @@
 # consumer-queue
 
-[![Build Status](https://travis-ci.org/Stanford-Mobisocial-IoT-Lab/consumer-queue.svg?branch=master)](https://travis-ci.org/gcampax/node-sockaddr) [![Coverage Status](https://coveralls.io/repos/github/Stanford-Mobisocial-IoT-Lab/consumer-queue/badge.svg?branch=master)](https://coveralls.io/github/gcampax/node-sockaddr?branch=master)
+[![Build Status](https://travis-ci.org/Stanford-Mobisocial-IoT-Lab/consumer-queue.svg?branch=master)](https://travis-ci.org/Stanford-Mobisocial-IoT-Lab/consumer-queue) [![Coverage Status](https://coveralls.io/repos/github/Stanford-Mobisocial-IoT-Lab/consumer-queue/badge.svg?branch=master)](https://coveralls.io/github/Stanford-Mobisocial-IoT-Lab/consumer-queue?branch=master)
 
 This module implements a simple unbounded producer-consumer queue (similar to a `BlockingQueue` in Java).
 Multiple asynchronous tasks can push data, and one task can pull data from the queue and process it.
