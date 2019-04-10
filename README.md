@@ -1,6 +1,6 @@
 # consumer-queue
 
-[![Build Status](https://travis-ci.org/Stanford-Mobisocial-IoT-Lab/consumer-queue.svg?branch=master)](https://travis-ci.org/Stanford-Mobisocial-IoT-Lab/consumer-queue) [![Coverage Status](https://coveralls.io/repos/github/Stanford-Mobisocial-IoT-Lab/consumer-queue/badge.svg?branch=master)](https://coveralls.io/github/Stanford-Mobisocial-IoT-Lab/consumer-queue?branch=master) [![Greenkeeper badge](https://badges.greenkeeper.io/Stanford-Mobisocial-IoT-Lab/consumer-queue.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/stanford-oval/consumer-queue.svg?branch=master)](https://travis-ci.org/stanford-oval/consumer-queue) [![Coverage Status](https://coveralls.io/repos/github/stanford-oval/consumer-queue/badge.svg?branch=master)](https://coveralls.io/github/stanford-oval/consumer-queue?branch=master) [![Greenkeeper badge](https://badges.greenkeeper.io/stanford-oval/consumer-queue.svg)](https://greenkeeper.io/)
 
 This module implements a simple unbounded producer-consumer queue (similar to a `BlockingQueue` in Java).
 Multiple asynchronous tasks can push data, and one task can pull data from the queue and process it.
