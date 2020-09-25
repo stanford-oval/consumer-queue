@@ -12,7 +12,7 @@ timeout.unref();
 const SUCCESS = [{}, {}, {}];
 const FAILURE = {};
 
-const ConsumerQueue = require('.');
+import ConsumerQueue from './lib/index';
 
 function testSimple() {
     const queue = new ConsumerQueue();
