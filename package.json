@@ -1,6 +1,6 @@
 {
   "name": "consumer-queue",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Asynchronous queueing (producer-consumer style) with promises",
   "repository": "https://github.com/stanford-oval/consumer-queue",
   "author": "Giovanni Campagna <gcampagn@cs.stanford.edu>",
